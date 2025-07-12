@@ -310,7 +310,7 @@
         ><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
       </a>
     </div>
-    <p>&copy; 2025 Fattoria Uova Libere - Tutti i diritti riservati</p>
+    <p>&copy; 2025 La casa delle galline - Tutti i diritti riservati</p>
   </footer>
 
   <script>
@@ -352,9 +352,10 @@
       messaggio += `• Nome: *${nome}*\n`;
       messaggio += `• Quantità: *${qty} uova*\n`;
       messaggio += `• Consegna: *${delivery === 'domicilio' ? 'A domicilio' : 'Ritiro a mano'}*\n\n`;
-      messaggio += `• Totale: *€ ${total}*\n`;
+    
       if (delivery === 'domicilio') messaggio += `• Indirizzo: *${indirizzo}*\n`;
-      if (note) messaggio += `• Note: _${note}_\n`;
+      if (note) messaggio += `• Note: _${note}_\n\n`;
+      messaggio += `• Totale: *€ ${total}*\n`;
 
       const url = `https://wa.me/393389500477?text=${encodeURIComponent(messaggio)}`;
       window.open(url, '_blank');
